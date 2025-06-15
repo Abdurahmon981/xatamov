@@ -1,0 +1,116 @@
+/* Bayroq rasmi orqa fonda */
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: white;
+    /* O‘zbekiston bayrog‘ining rasm manbasi */
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Uzbekistan.svg');
+    background-size: cover; /* Bayroq fonda to'liq ko'rinishi uchun */
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Yorug'likni biroz pasaytirish uchun gradient */
+    position: relative;
+    min-height: 100vh;
+    }
+
+    /* Orqa fon ustida qora-yarim shaffof qatlam */
+    body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* qora 50% shaffof */
+    z-index: -1;
+    }
+
+    header {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    }
+
+    .director {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fffae3; /* yengil sariqroq rang */
+    text-shadow: 1px 1px 3px black;
+    }
+
+    h1 {
+    font-size: 36px;
+    margin: 0;
+    text-shadow: 2px 2px 4px black;
+    }
+
+    h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px black;
+    }
+
+    ul.courses {
+    list-style: none;
+    padding: 0;
+    max-width: 400px;
+    margin: 0 auto 30px;
+    }
+
+    ul.courses li {
+    background: rgba(0, 0, 0, 0.4);
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+    }
+
+    .register-button {
+    display: block;
+    width: 220px;
+    margin: 0 auto;
+    padding: 14px 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #0077cc;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,119,204,0.6);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .register-button:hover {
+    background-color: #0077cc;
+    color: white;
+    box-shadow: 0 0 15px rgba(0,119,204,0.9);
+    }
+
+    /* Mobil uchun */
+    @media (max-width: 600px) {
+    h1 {
+        font-size: 26px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    ul.courses li {
+        font-size: 16px;
+    }
+    .register-button {
+        width: 90%;
+        font-size: 18px;
+    }
+    .director {
+        position: static;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    }
